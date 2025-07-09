@@ -36,6 +36,13 @@ android {
         jvmTarget = "17"
     }
 
+    // ✅ Tell Gradle to use Java 17 toolchain for ALL Java compilation
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+
     lint {
         disable 'InvalidPackage'
     }
